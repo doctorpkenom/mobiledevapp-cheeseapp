@@ -65,24 +65,43 @@ class QuizEngine:
         self.question_index += 1
 
     def calculate_result(self):
-        """Determines the cheese persona based on final score."""
-        # If they are lactose intolerant, they are the Wisp (-100)
+        """Determines the cheese persona based on final score with Coin Flip Rounding."""
+        # 1. Handle Special Cases (Lactose Intolerant)
         if self.current_score == -100:
-            # Find the specific Wisp entry or fallback
             for cheese in self.cheeses:
                 if cheese.get("score") == -100:
                     return cheese
-        
-        # Normal logic: Find the closest match or range
-        # The cheeses.json uses "score" as a target/min value. 
-        # Let's assume we find the cheese with the highest score that is <= current_score
-        # Sort cheeses by score descending to find the best match
-        
-        sorted_cheeses = sorted(self.cheeses, key=lambda x: x.get("score", 0), reverse=True)
-        
-        for cheese in sorted_cheeses:
-            if self.current_score >= cheese.get("score", 0):
+            return None # Should not happen if data is correct
+
+        # 2. Find Exact Match
+        for cheese in self.cheeses:
+            if cheese.get("score") == self.current_score:
                 return cheese
-                
-        # Fallback to the lowest scoring cheese if nothing matches
-        return sorted_cheeses[-1] if sorted_cheeses else None
+
+        # 3. No Exact Match -> Find Neighbors (Floor and Ceiling)
+        # Sort cheeses by score
+        sorted_cheeses = sorted(self.cheeses, key=lambda x: x.get("score", 0))
+        
+        lower_cheese = None
+        upper_cheese = None
+
+        for cheese in sorted_cheeses:
+            s = cheese.get("score", 0)
+            if s < self.current_score:
+                lower_cheese = cheese
+            elif s > self.current_score:
+                upper_cheese = cheese
+                break # Found the immediate upper bound
+
+        # 4. Coin Flip Logic
+        # If we are between two cheeses, flip a coin
+        if lower_cheese and upper_cheese:
+            return random.choice([lower_cheese, upper_cheese])
+        
+        # Edge Cases: Score is lower than lowest cheese or higher than highest
+        if lower_cheese and not upper_cheese:
+            return lower_cheese # Higher than max -> return max
+        if upper_cheese and not lower_cheese:
+            return upper_cheese # Lower than min -> return min
+            
+        return None

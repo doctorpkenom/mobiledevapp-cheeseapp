@@ -44,5 +44,20 @@ def test_quiz():
     print(f"Final Score: {engine.current_score}")
     print(f"Result: {result['name']}")
 
+    # Test 3: Coin Flip Logic
+    print("\n--- Test 3: Coin Flip Logic ---")
+    # Force a score that is likely between cheeses (e.g., 32, between Feta(21) and Pepper Jack(35))
+    engine.start_new_game()
+    engine.current_score = 32
+    print(f"Forced Score: {engine.current_score}")
+    
+    # Run multiple times to see if it flips
+    results = []
+    for _ in range(5):
+        r = engine.calculate_result()
+        results.append(r['name'])
+    
+    print(f"Results of 5 runs: {results}")
+
 if __name__ == "__main__":
     test_quiz()
