@@ -24,12 +24,26 @@ class QuizEngine:
             self.cheeses = []
 
     def start_new_game(self, num_questions=10):
-        """Resets score and picks random questions."""
+        """Resets score and picks random questions + mandatory lactose question."""
         self.current_score = 0
         self.question_index = 0
+        
+        # 1. Pick 10 random questions
         # Ensure we don't crash if we have fewer than num_questions
         count = min(len(self.questions), num_questions)
         self.current_session_questions = random.sample(self.questions, count)
+        
+        # 2. Add the mandatory Lactose Intolerant question
+        lactose_question = {
+            "id": 999,
+            "type": "choice",
+            "text": "Final Question: Are you lactose intolerant?",
+            "options": [
+                {"label": "Yes, sadly.", "value": "LACTOSE_YES"}, 
+                {"label": "No, I am strong.", "value": 0}
+            ]
+        }
+        self.current_session_questions.append(lactose_question)
 
     def get_next_question(self):
         """Returns the current question object or None if finished."""
@@ -37,12 +51,38 @@ class QuizEngine:
             return self.current_session_questions[self.question_index]
         return None
 
-    def submit_answer(self, points):
-        """Adds points to score and advances index."""
-        self.current_score += points
+    def submit_answer(self, value):
+        """Adds points to score and advances index. Handles special lactose override."""
+        # Check for the special lactose flag
+        if value == "LACTOSE_YES":
+            self.current_score = -100
+        else:
+            # Only add points if it's not the lactose override (which sets it directly)
+            # and if the current score isn't already -100 (though this is the last question anyway)
+            if isinstance(value, (int, float)):
+                self.current_score += value
+        
         self.question_index += 1
 
     def calculate_result(self):
         """Determines the cheese persona based on final score."""
-        # Logic to be implemented: find cheese where score is within range
-        pass
+        # If they are lactose intolerant, they are the Wisp (-100)
+        if self.current_score == -100:
+            # Find the specific Wisp entry or fallback
+            for cheese in self.cheeses:
+                if cheese.get("score") == -100:
+                    return cheese
+        
+        # Normal logic: Find the closest match or range
+        # The cheeses.json uses "score" as a target/min value. 
+        # Let's assume we find the cheese with the highest score that is <= current_score
+        # Sort cheeses by score descending to find the best match
+        
+        sorted_cheeses = sorted(self.cheeses, key=lambda x: x.get("score", 0), reverse=True)
+        
+        for cheese in sorted_cheeses:
+            if self.current_score >= cheese.get("score", 0):
+                return cheese
+                
+        # Fallback to the lowest scoring cheese if nothing matches
+        return sorted_cheeses[-1] if sorted_cheeses else None
