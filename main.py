@@ -1,7 +1,7 @@
 from quiz.quiz_engine import QuizEngine
 from tracker.tracker import Tracker
 from assets.asset_manager import AssetManager
-from interface.interface import Interface
+from interface_cli.interface_cli import Interface
 
 def main():
     # 1. Initialize Modules
