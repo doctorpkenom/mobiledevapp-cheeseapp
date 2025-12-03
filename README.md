@@ -24,7 +24,7 @@ A playful, nostalgic, and slightly chaotic personality test app. Answer question
 ├── /interface      # The Face (CLI/GUI)
 │   └── interface.py
 ├── /tests          # Verification Scripts
-└── main.py         # Entry Point
+└── app_cli_mode.py # Entry Point
 ```
 
 ## 🛠️ Getting Started
@@ -44,7 +44,7 @@ A playful, nostalgic, and slightly chaotic personality test app. Answer question
 ### Usage
 Run the main application:
 ```bash
-python main.py
+python app_cli_mode.py
 ```
 
 ### Testing
