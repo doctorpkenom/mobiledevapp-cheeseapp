@@ -3,5 +3,15 @@
         "date": "2025-12-02 22:10:01",
         "cheese": "Ricotta: The Soft Minimalist",
         "score": 4
+    },
+    {
+        "date": "2025-12-04 12:44:07",
+        "cheese": "Smoked Cheddar: The Quiet Rebel",
+        "score": 46
+    },
+    {
+        "date": "2025-12-04 12:45:12",
+        "cheese": "The Lactose-Phobic Wisp",
+        "score": -100
     }
 ]
