@@ -3,8 +3,8 @@
         "id": 1,
         "type": "scale",
         "text": "How deeply do you regret your last major life decision?",
-        "min_label": "No regrets, baby (0)",
-        "max_label": "Worse than a milk-soaked sock (10)"
+        "min_label": "No regrets, baby",
+        "max_label": "Worse than a milk-soaked sock"
     },
     {
         "id": 2,
@@ -33,8 +33,8 @@
         "id": 3,
         "type": "scale",
         "text": "How likely are you to tell a total stranger your darkest secret?",
-        "min_label": "I have walls higher than the Alps (0)",
-        "max_label": "I'm an open book on a delayed train (10)"
+        "min_label": "I have walls higher than the Alps",
+        "max_label": "I'm an open book on a delayed train"
     },
     {
         "id": 4,
@@ -63,8 +63,8 @@
         "id": 5,
         "type": "scale",
         "text": "Your spice tolerance is really a metaphor for your life tolerance. Rate it.",
-        "min_label": "A single sprinkle of black pepper is a journey (0)",
-        "max_label": "The ghost pepper is just the appetizer (10)"
+        "min_label": "A single sprinkle of black pepper is a journey",
+        "max_label": "The ghost pepper is just the appetizer"
     },
     {
         "id": 6,
@@ -93,8 +93,8 @@
         "id": 7,
         "type": "scale",
         "text": "How long has it been since you ate food that was maybe... past its prime?",
-        "min_label": "I check the date before I breathe near it (0)",
-        "max_label": "If it doesn't walk away, it's fair game (10)"
+        "min_label": "I check the date before I breathe near it",
+        "max_label": "If it doesn't walk away, it's fair game"
     },
     {
         "id": 8,
@@ -123,8 +123,8 @@
         "id": 9,
         "type": "scale",
         "text": "On a scale of 0-10, how much of your current life plan is based on a horoscope or a random fortune cookie?",
-        "min_label": "Pure, cold logic only (0)",
-        "max_label": "The cookie said 'Move West.' So I did (10)"
+        "min_label": "Pure, cold logic only",
+        "max_label": "The cookie said 'Move West.' So I did"
     },
     {
         "id": 10,
@@ -153,8 +153,8 @@
         "id": 11,
         "type": "scale",
         "text": "How often do you start a new hobby, invest heavily, and immediately quit?",
-        "min_label": "I'm a loyalist; I stick it out (0)",
-        "max_label": "My closet is a graveyard of unfinished projects (10)"
+        "min_label": "I'm a loyalist; I stick it out",
+        "max_label": "My closet is a graveyard of unfinished projects"
     },
     {
         "id": 12,
@@ -183,8 +183,8 @@
         "id": 13,
         "type": "scale",
         "text": "How much of your day is spent overthinking an interaction from 7 years ago?",
-        "min_label": "My memory is as fresh as a spring daisy (0)",
-        "max_label": "I'm currently composing a mental apology for that one thing I said in 2018 (10)"
+        "min_label": "My memory is as fresh as a spring daisy",
+        "max_label": "I'm currently composing a mental apology for that one thing I said in 2018"
     },
     {
         "id": 14,
@@ -213,8 +213,8 @@
         "id": 15,
         "type": "scale",
         "text": "The maximum number of tabs you currently have open on your web browser.",
-        "min_label": "Just the essential 3-5 (0)",
-        "max_label": "It's an unholy altar of memory usage (10)"
+        "min_label": "Just the essential 3-5",
+        "max_label": "It's an unholy altar of memory usage"
     },
     {
         "id": 16,
@@ -243,8 +243,8 @@
         "id": 17,
         "type": "scale",
         "text": "How often do you talk to inanimate objects, like plants or kitchen appliances?",
-        "min_label": "Never, I'm a functional adult (0)",
-        "max_label": "Daily pep talks with the toaster (10)"
+        "min_label": "Never, I'm a functional adult",
+        "max_label": "Daily pep talks with the toaster"
     },
     {
         "id": 18,
@@ -273,8 +273,8 @@
         "id": 19,
         "type": "scale",
         "text": "How likely are you to start a spontaneous, inappropriate dance party in a public space?",
-        "min_label": "My dignity is precious (0)",
-        "max_label": "I'm dancing in the DMV right now (10)"
+        "min_label": "My dignity is precious",
+        "max_label": "I'm dancing in the DMV right now"
     },
     {
         "id": 20,
@@ -303,8 +303,8 @@
         "id": 21,
         "type": "scale",
         "text": "If a wizard offered you a magical item, how likely are you to choose the cursed one?",
-        "min_label": "I choose the sensible, non-cursed wallet (0)",
-        "max_label": "Cursed objects give my life narrative weight (10)"
+        "min_label": "I choose the sensible, non-cursed wallet",
+        "max_label": "Cursed objects give my life narrative weight"
     },
     {
         "id": 22,
@@ -333,8 +333,8 @@
         "id": 23,
         "type": "scale",
         "text": "How accurately does your current outfit match the current weather?",
-        "min_label": "Perfectly layered and appropriate (0)",
-        "max_label": "It's 100 degrees and I'm wearing a snowsuit (10)"
+        "min_label": "Perfectly layered and appropriate",
+        "max_label": "It's 100 degrees and I'm wearing a snowsuit"
     },
     {
         "id": 24,
@@ -363,8 +363,8 @@
         "id": 25,
         "type": "scale",
         "text": "Rate your ability to keep a straight face when someone is being profoundly ridiculous.",
-        "min_label": "I am a rock of neutrality (0)",
-        "max_label": "I am incapable of containing the giggles (10)"
+        "min_label": "I am a rock of neutrality",
+        "max_label": "I am incapable of containing the giggles"
     },
     {
         "id": 26,
@@ -393,8 +393,8 @@
         "id": 27,
         "type": "scale",
         "text": "How likely are you to befriend a neighborhood raccoon?",
-        "min_label": "Wild animals belong outside (0)",
-        "max_label": "I'm currently teaching one to juggle (10)"
+        "min_label": "Wild animals belong outside",
+        "max_label": "I'm currently teaching one to juggle"
     },
     {
         "id": 28,
@@ -423,8 +423,8 @@
         "id": 29,
         "type": "scale",
         "text": "How often do you forget where you parked your car/bike/self?",
-        "min_label": "Never, I use mental mapping (0)",
-        "max_label": "I once walked home and forgot I drove (10)"
+        "min_label": "Never, I use mental mapping",
+        "max_label": "I once walked home and forgot I drove"
     },
     {
         "id": 30,
