@@ -3,96 +3,96 @@
         "name": "The Lactose-Phobic Wisp",
         "score": -100,
         "description": "You scored so low, you've fundamentally rejected the premise of the entire quiz. You are not a cheese; you are a sad, watery tear shed by a discouraged dairy cow. For the sake of your immediate digestive future, please step away from the cheeseboard. This test is clearly not for you. Go find a nice, safe almond milk yogurt, and contemplate your life choices.",
-        "image": "lactose-phobic-wisp.jpg"
+        "image": "assets/cheeses/lactose_intolerant_wisp.png"
     },
     {
         "name": "Ricotta: The Soft Minimalist",
         "score": 0,
         "description": "You are soft, fresh, and slightly sweet. Your life is an aesthetic Pinterest board and you probably meditate daily. You don't know what chaos is; you assume it's an abstract painting you saw once. You are utterly delightful, if a bit simple.",
-        "image": "ricotta-the-soft-minimalist.jpg"
+        "image": "assets/cheeses/ricotta.png"
     },
     {
         "name": "Provolone: The Mild-Mannered People Pleaser",
         "score": 7,
         "description": "You are the solid foundation of every sandwich and every friend group. Reliable, unassuming, and just a little bit stretchy. You avoid conflict like it's a moldy crust. You're nice, though. So, so nice. Maybe too nice.",
-        "image": "provolone-the-mild-mannered-people-pleaser.jpg"
+        "image": "assets/cheeses/provalone.png"
     },
     {
         "name": "Colby Jack: The Undecided Youth",
         "score": 14,
         "description": "You can't commit to a single personality, so you have two. You're a mix of responsible (Colby) and slightly exciting (Monterey Jack). You're still figuring things out, but you look great on a party platter. Mostly harmless, definitely still uses their parent's streaming login.",
-        "image": "colby-jack-the-undecided-youth.jpg"
+        "image": "assets/cheeses/colby_jack.png"
     },
     {
         "name": "Feta: The Crumbly Diva",
         "score": 21,
         "description": "You are sharp, salty, and you refuse to blend in with the salad. You have strong opinions about everything, especially the optimal temperature for iced coffee. You are dramatic and a bit high-strung, but your friends know you're the only one who tells the truth.",
-        "image": "feta-the-crumbly-diva.jpg"
+        "image": "assets/cheeses/feta.png"
     },
     {
         "name": "Gouda: The Surprisingly Smooth Operator",
         "score": 28,
         "description": "You look tame, but you've got an underlying nuttiness and depth that surprises people. You're secretly cool, but you'd never brag about it. You're the one who seems quiet but has traveled to 15 countries and speaks three languages. You're the dark horse of dairy.",
-        "image": "gouda-the-surprisingly-smooth-operator.jpg"
+        "image": "assets/cheeses/gouda.png"
     },
     {
         "name": "Pepper Jack: The Spicy Twist",
         "score": 35,
         "description": "You are Monterey Jack with a whole lot of *attitude*. You're friendly and approachable, but you always bring a little bit of heat to the situation. Your life is mostly organized, but you keep trying to convince everyone to get matching tattoos. You're a good time, not a long time.",
-        "image": "pepper-jack-the-spicy-twist.jpg"
+        "image": "assets/cheeses/pepper_jack.png"
     },
     {
         "name": "Parmesan: The Hard-Core Traditionalist",
         "score": 42,
         "description": "You are solid, aged, and very, very loud when grated (stressed). You are a purist. You believe in doing things the 'right' way, which often involves a lecture. You might be a little dry, but your flavor is powerful and you’re essential to everything good in this world.",
-        "image": "parmesan-the-hard-core-traditionalist.jpg"
+        "image": "assets/cheeses/parmesan.png"
     },
     {
         "name": "Smoked Cheddar: The Quiet Rebel",
         "score": 50,
         "description": "You're Cheddar, but you've been to the dark side and came back smelling faintly of woodsmoke and existential dread. You're fundamentally a good person, but you make choices that concern your mother. You have a signature leather jacket and probably own a motorcycle.",
-        "image": "smoked-cheddar-the-quiet-rebel.jpg"
+        "image": "assets/cheeses/smoked_chedder.png"
     },
     {
         "name": "Gruyère: The Expensive Introvert",
         "score": 57,
         "description": "You are complex, nutty, and generally only seen at nice parties. You're worth the effort, but you require a lot of melting (vulnerability) to truly come out of your shell. You can be the centerpiece, but you prefer to be the secret ingredient that elevates the whole experience. Classy chaos.",
-        "image": "gruyere-the-expensive-introvert.jpg"
+        "image": "assets/cheeses/gruere.png"
     },
     {
         "name": "Halloumi: The Indestructible Oddball",
         "score": 64,
         "description": "You are firm, salty, and totally resistant to melting under pressure. In fact, direct heat (chaos) only makes you better. You're the kind of person who thrives when everything is falling apart. You're rubbery, loud, and utterly unpredictable. No one understands you, but everyone loves to fry you.",
-        "image": "halloumi-the-indestructible-oddball.jpg"
+        "image": "assets/cheeses/halloumi.png"
     },
     {
         "name": "Limburger: The Agent of Pure Anarchy",
         "score": 71,
         "description": "You are a social disruptor with a pungent personality. Your energy is... powerful. You are high-risk, high-reward, and definitely high-odor. You don't have a filter, you don't have a plan, and you definitely don't have an apology. You're a lot, and you know it.",
-        "image": "limburger-the-agent-of-pure-anarchy.jpg"
+        "image": "assets/cheeses/limburger.png"
     },
     {
         "name": "Goat Cheese: The Free Spirit",
         "score": 78,
         "description": "You're tangy, slightly funky, and have a unique, earthy flavor that sets you apart. You refuse to follow trends and your favorite accessories are probably vintage or hand-forged. You are extremely cool, but you also definitely got that weird goat-cheese-smell on your favorite sweater.",
-        "image": "goat-cheese-the-free-spirit.jpg"
+        "image": "assets/cheeses/goat_cheese.png"
     },
     {
         "name": "Roquefort: The Gloriously Funky Mess",
         "score": 85,
         "description": "You are intense, marbled with beautiful, scary blue-green veins, and you are 100% unapologetic about it. Your taste is shocking and lingers forever. You are a highly specific, acquired taste. You're chaotic, but in a sophisticated, 'I have a trust fund' way. You might be a little moldy, but that's what makes you special.",
-        "image": "roquefort-the-gloriously-funky-mess.jpg"
+        "image": "assets/cheeses/roquefort.png"
     },
     {
         "name": "Époisses: The Overwhelming Intruder",
         "score": 92,
         "description": "You are borderline illegal in some social circles. Your presence is overwhelming, your aroma is offensive, and you have to be stored in an airtight container just to keep the peace. You're a complete nightmare, but you're so complex and delicious that people reluctantly tolerate you. Absolute 9/10 chaos, 10/10 flavor.",
-        "image": "epoisses-the-overwhelming-intruder.jpg"
+        "image": "assets/cheeses/epoisses.png"
     },
     {
         "name": "Vieux-Boulogne: The Certified Biohazard",
         "score": 100,
         "description": "You didn't just break the scale, you set it on fire. You are Vieux-Boulogne, scientifically proven to be the world's stinkiest cheese. Your life is pure, unadulterated anarchy. You require police escort and hazmat suits just to exist. You are a legend. A toxic, magnificent legend. We salute your complete lack of self-control.",
-        "image": "vieux-boulogne-the-certified-biohazard.jpg"
+        "image": "assets/cheeses/vieux_boulonge.png"
     }
 ]
