@@ -1,0 +1,3 @@
+Creating an Expo project using the blank-typescript template.
+
+Cannot create an app named "react" because it would conflict with a dependency of the same name.
