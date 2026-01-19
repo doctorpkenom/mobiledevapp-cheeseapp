@@ -11,10 +11,18 @@ class UIRenderer:
     def load_textures(self):
         # Load base textures if available
         # Added texture_paper to list
-        for name in ["texture_wood", "texture_tape", "texture_paper", "card_paper_bg"]:
-            path = os.path.join(self.asset_dir, "gen_assets", f"{name}.png")
+        for name in ["texture_wood", "texture_tape", "texture_paper", "card_paper_bg", "panel_yellow_large", "panel_cream_large", "panel_cream_small", "button_orange_large", "button_cream_strip", "button_yellow_strip"]:
+            path = os.path.join(self.asset_dir, f"{name}.png")
+            # Check root assets first, then gen_assets
+            if not os.path.exists(path):
+                 path = os.path.join(self.asset_dir, "gen_assets", f"{name}.png")
+            
             if os.path.exists(path):
-                self.textures[name] = Image.open(path).convert("RGBA")
+                img = Image.open(path).convert("RGBA")
+                # Apply transparency to specific generated assets
+                if name in ["panel_yellow_large", "panel_cream_large", "panel_cream_small", "button_orange_large", "button_cream_strip", "button_yellow_strip"]:
+                     img = self.make_white_transparent(img)
+                self.textures[name] = img
             else:
                 pass # Silent fail for now, fallback logic handles it
 
@@ -24,24 +32,80 @@ class UIRenderer:
         draw.rounded_rectangle((0, 0, w, h), radius=radius, fill=255)
         return mask
 
+    def make_white_transparent(self, img, threshold=220):
+        """Converts background white pixels to transparent using a stable flood fill."""
+        img = img.convert("RGBA")
+        width, height = img.size
+        pixels = img.load()
+        
+        # Directions for neighbors (4-way)
+        dirs = [(0, 1), (0, -1), (1, 0), (-1, 0)]
+        
+        # Starting points: corners
+        seeds = [(0, 0), (width-1, 0), (0, height-1), (width-1, height-1)]
+        
+        # Visited set
+        visited = set()
+        queue = []
+        
+        # Initialize queue with valid white corners
+        for x, y in seeds:
+            if 0 <= x < width and 0 <= y < height:
+                r, g, b, a = pixels[x, y]
+                if r > threshold and g > threshold and b > threshold:
+                    queue.append((x, y))
+                    visited.add((x, y))
+        
+        while queue:
+            cx, cy = queue.pop(0)
+            # Make transparent
+            pixels[cx, cy] = (255, 255, 255, 0)
+            
+            for dx, dy in dirs:
+                nx, ny = cx + dx, cy + dy
+                if 0 <= nx < width and 0 <= ny < height and (nx, ny) not in visited:
+                    r, g, b, a = pixels[nx, ny]
+                    # Check if neighbor is also white-ish
+                    if r > threshold and g > threshold and b > threshold:
+                        visited.add((nx, ny))
+                        queue.append((nx, ny))
+        return img
+
     def create_panel(self, width, height, radius=20, border_color="#5D4037", border_width=4, texture_key="texture_wood"):
-        """Creates a wood panel with border and internal texture."""
+        """Creates a panel. If texture_key matches a known full-image asset, it scales it."""
         img = Image.new("RGBA", (width, height), (0,0,0,0))
         
+        # Check if texture_key is a full-asset panel (not just a pattern)
+        is_full_asset = texture_key in ["panel_yellow_large", "panel_cream_large", "panel_cream_small"]
+
         if texture_key in self.textures:
             tex = self.textures[texture_key]
-            tex = tex.resize((width, height), Image.Resampling.LANCZOS)
-            mask = self.create_rounded_rect_mask(width, height, radius)
-            img.paste(tex, (0,0), mask)
+            
+            if is_full_asset:
+                 # Resize the asset to fits
+                 tex = tex.resize((width, height), Image.Resampling.LANCZOS)
+                 img.paste(tex, (0,0))
+            else:
+                # Pattern behavior
+                tex = tex.resize((width, height), Image.Resampling.LANCZOS)
+                mask = self.create_rounded_rect_mask(width, height, radius)
+                img.paste(tex, (0,0), mask)
+                
+                # Overlay border for patterns
+                overlay = Image.new("RGBA", (width, height), (0,0,0,0))
+                draw = ImageDraw.Draw(overlay)
+                draw.rounded_rectangle((0,0,width-1,height-1), radius=radius, outline=border_color, width=border_width)
+                img = Image.alpha_composite(img, overlay)
         else:
+             # Fallback solid
             draw = ImageDraw.Draw(img)
             draw.rounded_rectangle((0,0,width,height), radius=radius, fill="#D7CCC8")
+            
+            overlay = Image.new("RGBA", (width, height), (0,0,0,0))
+            draw = ImageDraw.Draw(overlay)
+            draw.rounded_rectangle((0,0,width-1,height-1), radius=radius, outline=border_color, width=border_width)
+            img = Image.alpha_composite(img, overlay)
 
-        overlay = Image.new("RGBA", (width, height), (0,0,0,0))
-        draw = ImageDraw.Draw(overlay)
-        draw.rounded_rectangle((0,0,width-1,height-1), radius=radius, outline=border_color, width=border_width)
-        
-        img = Image.alpha_composite(img, overlay)
         return self.add_drop_shadow(img, radius=radius)
 
     def create_torn_edge_mask(self, w, h, jaggedness=2):

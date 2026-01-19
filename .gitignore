@@ -48,3 +48,4 @@ wheels/
 .installed.cfg
 *.egg
 interface_renders/
+app_cursor/
