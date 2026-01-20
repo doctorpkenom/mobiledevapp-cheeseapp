@@ -1,5 +1,12 @@
 import { motion } from 'framer-motion';
 
+/**
+ * Welcome Screen Component.
+ * Displays the title animation, introductory text, and floating cheese particles.
+ * 
+ * @param {Object} props
+ * @param {Function} props.onStart - Callback to start the game
+ */
 const WelcomeScreen = ({ onStart }) => {
     return (
         <div style={{

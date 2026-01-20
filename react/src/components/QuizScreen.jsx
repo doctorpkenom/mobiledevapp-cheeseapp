@@ -2,6 +2,17 @@ import { motion } from 'framer-motion';
 import MultipleChoice from './MultipleChoice';
 import SliderQuestion from './SliderQuestion';
 
+/**
+ * Quiz Screen Component.
+ * Orchestrates the display of questions and the progress bar.
+ * Dynamically renders either MultipleChoice or SliderQuestion based on type.
+ * 
+ * @param {Object} props
+ * @param {Object} props.question - Current question object
+ * @param {number} props.totalQuestions - Total count of questions
+ * @param {number} props.currentNumber - Current question number (1-indexed)
+ * @param {Function} props.onAnswer - Callback when answer is submitted
+ */
 const QuizScreen = ({ question, totalQuestions, currentNumber, onAnswer }) => {
     return (
         <div className="card fun-border">

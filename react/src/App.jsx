@@ -8,6 +8,11 @@ import WelcomeScreen from './components/WelcomeScreen'
 import QuizScreen from './components/QuizScreen'
 import ResultScreen from './components/ResultScreen'
 
+/**
+ * Main Application Component.
+ * Routes between Welcome, Quiz, and Result screens based on game state.
+ * Uses Framer Motion for page transitions.
+ */
 function App() {
   const { gameState, startNewGame, submitAnswer } = useQuizEngine();
 

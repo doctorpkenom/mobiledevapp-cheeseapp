@@ -1,5 +1,13 @@
 import { motion } from 'framer-motion';
 
+/**
+ * Multiple Choice Question Component.
+ * Renders options as a vertical stack of buttons for better readability.
+ * 
+ * @param {Object} props
+ * @param {Object} props.question - Question data including options list
+ * @param {Function} props.onAnswer - Callback when an option is selected
+ */
 const MultipleChoice = ({ question, onAnswer }) => {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>

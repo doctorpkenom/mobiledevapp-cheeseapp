@@ -1,6 +1,14 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
+/**
+ * Slider Question Component.
+ * Renders a specialized range input with a custom "Cheese Wheel" thumb.
+ * 
+ * @param {Object} props
+ * @param {Object} props.question - Question data (min_label, max_label)
+ * @param {Function} props.onAnswer - Callback with the slider value
+ */
 const SliderQuestion = ({ question, onAnswer }) => {
     const [value, setValue] = useState(5); // 0-10 scale
 

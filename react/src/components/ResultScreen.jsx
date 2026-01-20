@@ -1,5 +1,13 @@
 import { motion } from 'framer-motion';
 
+/**
+ * Result Screen Component.
+ * Displays the final "Cheese Persona" with a dynamic image and description.
+ * 
+ * @param {Object} props
+ * @param {Object} props.result - The final result object (name, description, image path)
+ * @param {Function} props.onRestart - Callback to restart the game
+ */
 const ResultScreen = ({ result, onRestart }) => {
     // Construct image path
     // cheeses.json usually provides "cheeses/filename.png"

@@ -2,6 +2,23 @@ import { useState, useCallback } from 'react';
 import QUESTIONS from '../data/questions.json';
 import CHEESES from '../data/cheeses.json';
 
+/**
+ * Custom hook to manage the Cheese Quiz logic.
+ * Handles state interactions, scoring, and result calculation.
+ * 
+ * @typedef {Object} GameState
+ * @property {'WELCOME' | 'QUIZ' | 'RESULT'} screen - Current game screen
+ * @property {number} score - Current accumulated score
+ * @property {number} questionIndex - Index of the current question
+ * @property {Array} sessionQuestions - List of questions for this session
+ * @property {Object|null} result - Final cheese result object
+ * 
+ * @returns {{
+ *   gameState: GameState,
+ *   startNewGame: () => void,
+ *   submitAnswer: (value: number|string) => void
+ * }}
+ */
 export const useQuizEngine = () => {
     const [gameState, setGameState] = useState({
         screen: 'WELCOME', // WELCOME, QUIZ, RESULT
