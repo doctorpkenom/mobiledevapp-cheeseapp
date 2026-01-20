@@ -1,0 +1,56 @@
+:root {
+  --bg-color: #FFF9C4;       /* Light Cream - Main BG */
+  --card-bg: #FFFFFF;        /* White - Card BG */
+  --text-color: #3E2723;     /* Dark Brown - Text */
+  --accent-color: #FFB74D;   /* Orange - Buttons/Highlights */
+  --accent-dark: #F57C00;    /* Darker Orange - Hover/Active */
+  --border-color: #3E2723;   /* Dark Brown - Borders */
+  
+  --font-title: "Comic Sans MS", "Chalkboard SE", sans-serif;
+  --font-body: "Arial", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden; /* Prevent scroll on mobile */
+}
+
+/* Utils */
+.fun-border {
+  border: 3px solid var(--border-color);
+  border-radius: 25px 35px 20px 30px; /* Varied corners */
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  font-family: var(--font-title);
+  font-weight: bold;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.1s, background-color 0.2s;
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+  background-color: var(--accent-dark);
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 2rem;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+}
