@@ -49,3 +49,4 @@ wheels/
 *.egg
 interface_renders/
 app_cursor/
+documents/
