@@ -27,3 +27,8 @@ The librarian for file paths. It abstracts the file system so the rest of the ap
     def list_assets(self):
         return os.listdir(self.assets_dir)
     ```
+
+### 2. Image Assets
+- `background.png`: Main app background.
+- `cheeses/`: Directory containing cheese result images.
+- `icon_*.png`: UI icons.

@@ -6,52 +6,55 @@ A playful, nostalgic, and slightly chaotic personality test app. Answer question
 - **30+ Questions**: Ranging from deep philosophical inquiries to laundry habits.
 - **Coin Flip Scoring**: If you fall between two cheese personalities, a coin flip decides your fate.
 - **Lactose Intolerance Mode**: A secret ending for the weak of stomach.
-- **History Tracker**: Remembers your past results so you can see your evolution.
-- **Modular Design**: Built with separate modules for Quiz Logic, Interface, Assets, and Tracking.
+- **Web Interface**: Modern React-based UI with smooth animations.
 
 ## 📂 Project Structure
-```
-/mobiledevapp-cheeseapp
-├── /quiz           # The Brain (Logic & Data)
-│   ├── quiz_engine.py
-│   ├── questions.json
-│   └── cheeses.json
-├── /tracker        # The Memory (History)
-│   ├── tracker.py
-│   └── history.json
-├── /assets         # The Looks (Images)
-│   └── asset_manager.py
-├── /interface      # The Face (CLI/GUI)
-│   └── interface.py
-├── /tests          # Verification Scripts
-└── app_cli_mode.py # Entry Point
-```
 
-## 🛠️ Getting Started
+This project is divided into two main parts:
 
-### Prerequisites
-- Python 3.x
+### 1. `react/` (The Application)
+The active web application.
+- **Core Logic:** `src/hooks/useQuizEngine.js`
+- **UI:** `src/components/`
+- [Read Frontend Documentation](./react/README.md)
 
-### Installation
-1. Clone the repository.
-2. Create a virtual environment (optional but recommended):
+### 2. `quiz/` (The Reference)
+The original Python reference implementation of the logic.
+- **Engine:** `quiz_engine.py`
+- **Data:** `questions.json`, `cheeses.json`
+- [Read Backend Documentation](./quiz/README.md)
+
+## 🏃 Quick Start Walkthrough
+
+Follow these steps to run the application on your computer.
+
+### Step 1: Prerequisites
+Make sure you have **Node.js** installed.
+- Check by running: `node -v` in your terminal.
+- If not installed, download it from [nodejs.org](https://nodejs.org/).
+
+### Step 2: Setup
+1. Open your terminal.
+2. Navigate to the `react` folder:
    ```bash
-   python -m venv .venv
-   .\.venv\Scripts\Activate
+   cd react
    ```
-3. Install dependencies (currently none required for the core CLI).
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-### Usage
-Run the main application:
+### Step 3: Run the App
+Start the development server:
 ```bash
-python app_cli_mode.py
+npm run dev
 ```
+You will see a link like `http://localhost:5173`. **Ctrl + Click** it (or copy-paste it into your browser) to start the test!
 
-### Testing
-Run the verification scripts to check the modules:
+### Optional: Python Reference
+If you want to look at the python logic:
 ```bash
-python -m tests.test_quiz
-python -m tests.test_tracker
-python -m tests.test_assets
+# From the root folder
+python -m quiz.quiz_engine
 ```
-
+*(Note: The main interface is now the web app)*

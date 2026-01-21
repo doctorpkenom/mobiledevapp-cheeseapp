@@ -1,6 +1,6 @@
 # Quiz Module Documentation 🧠
 
-This folder contains the core logic and data for the Cheese Personality Test.
+This folder contains the core logic and data for the Cheese Personality Test (Reference Implementation).
 
 ## Files
 
@@ -47,15 +47,6 @@ The database of questions. Supports "scale" (slider) and "choice" (buttons) type
         "text": "How deeply do you regret your last major life decision?",
         "min_label": "No regrets (0)",
         "max_label": "Deep regret (10)"
-    },
-    {
-        "id": 2,
-        "type": "choice",
-        "text": "It's Friday night. What's the plan?",
-        "options": [
-            {"label": "Sleep", "value": 0},
-            {"label": "Party", "value": 10}
-        ]
     }
 ]
 ```
