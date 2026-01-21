@@ -17,6 +17,14 @@ const WelcomeScreen = ({ onStart }) => {
             justifyContent: 'center',
             height: '100%'
         }}>
+            <motion.img
+                src="/assets/logo_main.png"
+                alt="Cheese App Logo"
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ type: "spring", stiffness: 260, damping: 20 }}
+                style={{ width: '200px', marginBottom: '1rem' }}
+            />
             <motion.h1
                 initial={{ y: -50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}

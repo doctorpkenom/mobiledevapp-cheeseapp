@@ -34,10 +34,11 @@ const SliderQuestion = ({ question, onAnswer }) => {
                         width: '100%',
                         height: '12px',
                         borderRadius: '6px',
-                        background: 'var(--border-color)',
+                        background: 'url(/assets/slider_track.png) center center no-repeat',
+                        backgroundSize: '100% 100%',
                         outline: 'none',
                         appearance: 'none',
-                        border: '2px solid white',
+                        border: 'none',
                         cursor: 'pointer'
                     }}
                 />

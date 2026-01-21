@@ -22,8 +22,10 @@ const MultipleChoice = ({ question, onAnswer }) => {
                     whileTap={{ scale: 0.98 }}
                     onClick={() => onAnswer(opt.value)}
                     style={{
-                        padding: '1rem',
-                        background: 'var(--bg-color)', // Cream bg for buttons
+                        padding: '1.5rem',
+                        background: 'url(/assets/button_cream_strip.png) center center no-repeat',
+                        backgroundSize: '100% 100%',
+                        border: 'none', // Image handles the look
                         fontSize: '1.1rem',
                         textAlign: 'left',
                         cursor: 'pointer',
